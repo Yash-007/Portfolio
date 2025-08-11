@@ -3,6 +3,7 @@ import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
 import Achievements from './components/Achievements';
 import Blogs from './components/Blogs';
+import About from './components/About';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -88,8 +89,8 @@ function App() {
 
         <section id="about" className="min-h-screen py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-8">About Me</h2>
-            {/* Add about content */}
+            <h2 className="text-3xl font-bold mb-12">About Me</h2>
+            <About />
           </div>
         </section>
       </main>
