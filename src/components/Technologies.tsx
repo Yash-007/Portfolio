@@ -1,11 +1,4 @@
-import {
-  CodeBracketIcon,
-  CommandLineIcon,
-  WindowIcon,
-  ServerIcon,
-  CircleStackIcon,
-  WrenchScrewdriverIcon
-} from '@heroicons/react/24/outline';
+import { CodeBracketIcon, CommandLineIcon, WindowIcon, ServerIcon, CircleStackIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline';
 
 interface TechCategory {
   title: string;
@@ -48,17 +41,17 @@ const technologies: TechCategory[] = [
 
 export default function Technologies() {
   return (
-    <div className="grid md:grid-cols-2 gap-12">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {technologies.map((category) => (
         <div 
           key={category.title}
-          className="bg-white rounded-lg p-6 border border-gray-100"
+          className="bg-secondary p-6 rounded-lg border border-secondary/50 hover:border-accent/30 transition-all duration-300"
         >
           <div className="flex items-center gap-3 mb-6">
-            <div className="p-2 bg-accent/5 rounded-lg text-accent">
+            <div className="p-2 bg-accent/10 text-accent rounded-lg">
               {category.icon}
             </div>
-            <h3 className="text-xl font-semibold text-gray-900">
+            <h3 className="text-xl font-semibold text-text">
               {category.title}
             </h3>
           </div>
@@ -69,8 +62,8 @@ export default function Technologies() {
                 key={skill}
                 className="flex items-center gap-2 group"
               >
-                <div className="w-1.5 h-1.5 rounded-full bg-accent/30 group-hover:bg-accent transition-colors" />
-                <span className="text-gray-700 group-hover:text-accent transition-colors">
+                <div className="w-1.5 h-1.5 rounded-full bg-accent/50 group-hover:bg-accent transition-colors" />
+                <span className="text-text-secondary group-hover:text-accent transition-colors">
                   {skill}
                 </span>
               </div>
