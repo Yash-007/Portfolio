@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
+import Achievements from './components/Achievements';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -72,8 +73,8 @@ function App() {
 
         <section id="achievements" className="min-h-screen py-20">
           <div className="container mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-8">Achievements</h2>
-            {/* Add achievements content */}
+            <h2 className="text-3xl font-bold mb-12">Achievements & Recognition</h2>
+            <Achievements />
           </div>
         </section>
 
