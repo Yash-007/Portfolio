@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
+import Technologies from './components/Technologies';
 import Achievements from './components/Achievements';
 import Blogs from './components/Blogs';
 import About from './components/About';
@@ -9,6 +10,7 @@ const sections = [
   { id: 'home', label: 'Home' },
   { id: 'work', label: 'Work Experience' },
   { id: 'projects', label: 'Projects' },
+  { id: 'technologies', label: 'Technologies' },
   { id: 'achievements', label: 'Achievements' },
   { id: 'blogs', label: 'Blogs' },
   { id: 'about', label: 'About' },
@@ -70,6 +72,13 @@ function App() {
           <div className="container mx-auto px-6">
             <h2 className="text-3xl font-bold mb-12">Featured Projects</h2>
             <Projects />
+          </div>
+        </section>
+
+        <section id="technologies" className="min-h-screen py-20">
+          <div className="container mx-auto px-6">
+            <h2 className="text-3xl font-bold mb-12">Tools & Technologies</h2>
+            <Technologies />
           </div>
         </section>
 
