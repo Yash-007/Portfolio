@@ -11,9 +11,14 @@ export default function StarBackground() {
   return (
     <Particles
       id="tsparticles"
+      className="absolute inset-0"
       init={particlesInit}
       options={{
         fullScreen: false,
+        style: {
+          position: "absolute",
+          zIndex: 1,
+        },
         background: {
           color: "transparent",
         },
@@ -25,24 +30,28 @@ export default function StarBackground() {
           links: {
             enable: true,
             color: "#64ffda",
-            opacity: 0.05,
-            distance: 150,
-            width: 1,
+            opacity: 0.1,
+            distance: 200,
+            width: 0.3,
+            triangles: {
+              enable: true,
+              opacity: 0.02
+            }
           },
           move: {
             enable: true,
             direction: "none",
             outModes: {
-              default: "bounce",
+              default: "out",
             },
             random: true,
-            speed: 0.3,
+            speed: 0.2,
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 800,
+              area: 1000,
             },
             value: 40,
           },
@@ -50,8 +59,8 @@ export default function StarBackground() {
             value: 0.15,
             animation: {
               enable: true,
-              speed: 0.3,
-              minimumValue: 0.05,
+              speed: 0.15,
+              minimumValue: 0.08,
               sync: false,
             }
           },
@@ -59,7 +68,7 @@ export default function StarBackground() {
             type: "circle",
           },
           size: {
-            value: { min: 1, max: 2 },
+            value: { min: 0.3, max: 0.8 },
           },
         },
         detectRetina: true,

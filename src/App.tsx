@@ -19,12 +19,13 @@ const sections = [
 
 function App() {
   return (
-    <div className="min-h-screen bg-primary text-text">
-      <div className="fixed inset-0 w-full h-full">
+    <div className="relative min-h-screen bg-primary text-text">
+      <div className="absolute inset-0 z-0">
         <StarBackground />
       </div>
+
       {/* Header */}
-      <header className="fixed w-full bg-primary/80 backdrop-blur-sm border-b border-secondary/50 z-50">
+      <header className="sticky top-0 w-full bg-primary/80 backdrop-blur-sm border-b border-secondary/50 z-50">
         <nav className="container mx-auto px-6 py-4">
           <div className="flex justify-between items-center">
             <h1 className="text-2xl font-bold">
@@ -60,7 +61,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main>
+      <main className="relative z-10">
         {/* Home/Landing Section */}
         <section id="home" className="min-h-screen flex items-center pt-20">
           <div className="container mx-auto px-6">
