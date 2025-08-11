@@ -1,57 +1,56 @@
 export default function About() {
   return (
-    <div className="space-y-10">
-      {/* Primary Points */}
-      <ul className="space-y-4">
-        <li className="flex items-center gap-3 group">
-          <span className="text-accent text-xl">▹</span>
+    <div className="max-w-3xl">
+      <ul className="space-y-6">
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
           <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
-            Full Stack Developer passionate about building scalable web applications
+            A tech enthusiast who believes in the power of code to solve real-world problems
           </span>
         </li>
-        <li className="flex items-center gap-3 group">
-          <span className="text-accent text-xl">▹</span>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
           <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
-            Competitive Programmer (Specialist @Codeforces, ICPC Regionalist)
+            Love taking on challenging problems and breaking them down into simple solutions
           </span>
         </li>
-        <li className="flex items-center gap-3 group">
-          <span className="text-accent text-xl">▹</span>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
           <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
-            Open Source Contributor and Hackathon Enthusiast
+            Enjoy collaborating with teams and believe great products come from great teamwork
           </span>
         </li>
-        <li className="flex items-center gap-3 group">
-          <span className="text-accent text-xl">▹</span>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
           <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
-            Currently exploring Cloud Architecture and System Design
+            Always curious to learn new technologies and explore different approaches to problem-solving
+          </span>
+        </li>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
+          <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
+            Passionate about sharing knowledge through mentoring and technical writing
+          </span>
+        </li>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
+          <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
+            Strong believer in clean code, best practices, and continuous improvement
+          </span>
+        </li>
+
+        <li className="flex items-start gap-4 group">
+          <span className="text-accent text-2xl font-light mt-1">▹</span>
+          <span className="text-lg text-gray-800 group-hover:text-accent transition-colors">
+            When not coding, you'll find me solving competitive programming challenges or contributing to open source
           </span>
         </li>
       </ul>
-
-      {/* Secondary Points */}
-      <div className="space-y-3 text-gray-600">
-        <div className="flex items-center gap-2">
-          <span className="text-accent">›</span>
-          <span>Based in India, open to remote opportunities</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-accent">›</span>
-          <span>Proficient in React, Node.js, TypeScript, Python</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-accent">›</span>
-          <span>Experience with AWS, Docker, MongoDB, PostgreSQL</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-accent">›</span>
-          <span>Strong foundation in Data Structures and Algorithms</span>
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="text-accent">›</span>
-          <span>Always learning and implementing best practices</span>
-        </div>
-      </div>
     </div>
   );
 }
