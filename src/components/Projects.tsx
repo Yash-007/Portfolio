@@ -17,7 +17,7 @@ const projects: Project[] = [
     technologies: ["React", "TypeScript", "Python", "TensorFlow", "FastAPI"],
     githubLink: "https://github.com/yourusername/ai-task-manager",
     liveLink: "https://ai-task-manager.demo",
-    image: "https://placehold.co/1200x800/4a90e2/ffffff?text=AI+Task+Manager&font=raleway",
+    image: "https://placehold.co/1200x800/112240/64ffda?text=AI+Task+Manager&font=raleway",
     featured: true
   },
   {
@@ -26,173 +26,123 @@ const projects: Project[] = [
     technologies: ["Vue.js", "Node.js", "D3.js", "MongoDB", "Docker"],
     githubLink: "https://github.com/yourusername/ecommerce-analytics",
     liveLink: "https://ecommerce-analytics.demo",
-    image: "https://placehold.co/1200x800/2d3748/ffffff?text=Analytics+Dashboard&font=raleway",
+    image: "https://placehold.co/1200x800/112240/64ffda?text=Analytics+Dashboard&font=raleway",
     featured: true
-  },
-  {
-    title: "Smart Home IoT Hub",
-    description: "Centralized IoT hub for smart home device management with real-time monitoring and automation capabilities.",
-    technologies: ["React Native", "MQTT", "Node.js", "MongoDB"],
-    githubLink: "https://github.com/yourusername/smart-home-hub",
-    liveLink: "https://smart-home.demo",
-    image: "https://placehold.co/800x600/38a169/ffffff?text=Smart+Home+IoT&font=raleway"
-  },
-  {
-    title: "Social Media Content Scheduler",
-    description: "Automated social media content scheduling tool with AI-powered engagement time prediction.",
-    technologies: ["React", "Express", "PostgreSQL", "Redis"],
-    githubLink: "https://github.com/yourusername/social-scheduler",
-    image: "https://placehold.co/800x600/805ad5/ffffff?text=Social+Media+Tool&font=raleway"
-  },
-  {
-    title: "Fitness Tracking API",
-    description: "RESTful API for fitness tracking applications with machine learning-based workout recommendations.",
-    technologies: ["FastAPI", "SQLAlchemy", "scikit-learn", "PostgreSQL"],
-    githubLink: "https://github.com/yourusername/fitness-api",
-    image: "https://placehold.co/800x600/e53e3e/ffffff?text=Fitness+Tracker&font=raleway"
-  },
-  {
-    title: "Blockchain Voting System",
-    description: "Secure and transparent voting system built on blockchain technology with user authentication.",
-    technologies: ["Solidity", "Web3.js", "React", "Node.js"],
-    githubLink: "https://github.com/yourusername/blockchain-voting",
-    image: "https://placehold.co/800x600/d69e2e/ffffff?text=Blockchain+Voting&font=raleway"
   }
 ];
 
 export default function Projects() {
   return (
-    <div className="space-y-20">
+    <div className="space-y-24">
       {/* Featured Projects */}
-      <div className="space-y-24">
-        {projects
-          .filter(project => project.featured)
-          .map((project, index) => (
-            <div
-              key={project.title}
-              className={`flex flex-col ${
-                index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-              } gap-8 group`}
-            >
-              {/* Project Image */}
-              <div className="md:w-3/5 relative overflow-hidden rounded-xl shadow-lg">
-                <div className="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-300" />
+      {projects
+        .filter(project => project.featured)
+        .map((project, index) => (
+          <div
+            key={project.title}
+            className={`flex flex-col ${
+              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
+            } gap-8 group`}
+          >
+            {/* Project Image */}
+            <div className="md:w-3/5 relative">
+              <div className="relative h-[300px] md:h-[400px] overflow-hidden rounded-lg bg-secondary">
                 <img
-                  src={project.image || 'https://placehold.co/600x400?text=Project+Image'}
+                  src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover mix-blend-multiply opacity-75 group-hover:opacity-100 transition-opacity duration-300"
                 />
-              </div>
-
-              {/* Project Info */}
-              <div className="md:w-2/5 flex flex-col justify-center">
-                <h3 className="text-2xl font-bold text-accent mb-4">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-6 backdrop-blur-sm bg-white/50 p-6 rounded-lg shadow-sm">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-3 mb-6">
-                  {project.technologies.map(tech => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 bg-secondary rounded-full text-sm font-medium text-gray-700"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                <div className="flex gap-4">
-                  {project.githubLink && (
-                    <a
-                      href={project.githubLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-accent transition-colors"
-                    >
-                      <CodeBracketIcon className="w-6 h-6" />
-                    </a>
-                  )}
-                  {project.liveLink && (
-                    <a
-                      href={project.liveLink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-600 hover:text-accent transition-colors"
-                    >
-                      <LinkIcon className="w-6 h-6" />
-                    </a>
-                  )}
-                </div>
+                <div className="absolute inset-0 bg-secondary/30 group-hover:bg-transparent transition-colors duration-300" />
               </div>
             </div>
-          ))}
-      </div>
+
+            {/* Project Info */}
+            <div className="md:w-2/5 flex flex-col justify-center">
+              <p className="text-accent font-mono text-sm mb-2">Featured Project</p>
+              <h3 className="text-2xl font-bold text-text mb-4 group-hover:text-accent transition-colors">
+                {project.title}
+              </h3>
+              <div className="bg-secondary p-6 rounded-lg shadow-xl mb-4">
+                <p className="text-text-secondary">
+                  {project.description}
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 mb-6 font-mono text-sm">
+                {project.technologies.map(tech => (
+                  <span
+                    key={tech}
+                    className="text-text-secondary"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+              <div className="flex gap-4">
+                {project.githubLink && (
+                  <a
+                    href={project.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-secondary hover:text-accent transition-colors"
+                    aria-label="GitHub Repository"
+                  >
+                    <CodeBracketIcon className="w-6 h-6" />
+                  </a>
+                )}
+                {project.liveLink && (
+                  <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-text-secondary hover:text-accent transition-colors"
+                    aria-label="Live Demo"
+                  >
+                    <LinkIcon className="w-6 h-6" />
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
 
       {/* Other Projects Grid */}
       <div>
-        <h3 className="text-xl font-bold mb-8 text-center">Other Noteworthy Projects</h3>
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects
-            .filter(project => !project.featured)
-            .map(project => (
-              <div
-                key={project.title}
-                className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group overflow-hidden"
-              >
-                {/* Project Image */}
-                <div className="relative h-48 overflow-hidden">
-                  <div className="absolute inset-0 bg-accent/10 group-hover:bg-transparent transition-colors duration-300" />
-                  <img
-                    src={project.image || 'https://placehold.co/600x400?text=Project+Image'}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
-                  <div className="absolute top-4 right-4 flex gap-2">
-                    {project.githubLink && (
-                      <a
-                        href={project.githubLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-600 hover:text-accent transition-colors shadow-sm"
-                      >
-                        <CodeBracketIcon className="w-5 h-5" />
-                      </a>
-                    )}
-                    {project.liveLink && (
-                      <a
-                        href={project.liveLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-600 hover:text-accent transition-colors shadow-sm"
-                      >
-                        <LinkIcon className="w-5 h-5" />
-                      </a>
-                    )}
-                  </div>
+        <h3 className="text-xl font-bold text-center text-text mb-4">Other Noteworthy Projects</h3>
+        <p className="text-text-secondary text-center mb-12 font-mono">view the archive</p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {[1, 2, 3, 4, 5, 6].map((_, index) => (
+            <div
+              key={index}
+              className="bg-secondary p-6 rounded-lg group hover:translate-y-[-5px] transition-all duration-300"
+            >
+              <div className="flex justify-between items-start mb-6">
+                <div className="text-accent">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 24 24" fill="currentColor">
+                    <path fillRule="evenodd" d="M3 3h18v18H3V3zm16 16V5H5v14h14z" clipRule="evenodd" />
+                  </svg>
                 </div>
-
-                {/* Project Info */}
-                <div className="p-6">
-                  <h4 className="text-lg font-bold text-accent group-hover:text-accent/80 transition-colors mb-3">
-                    {project.title}
-                  </h4>
-                  <p className="text-gray-600 mb-4 text-sm">
-                    {project.description}
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    {project.technologies.map(tech => (
-                      <span
-                        key={tech}
-                        className="px-2 py-1 bg-secondary/50 rounded-full text-xs font-medium text-gray-700"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
+                <div className="flex gap-3">
+                  <a href="#" className="text-text-secondary hover:text-accent transition-colors">
+                    <CodeBracketIcon className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="text-text-secondary hover:text-accent transition-colors">
+                    <LinkIcon className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
-            ))}
+              <h4 className="text-text text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+                Project Title {index + 1}
+              </h4>
+              <p className="text-text-secondary text-sm mb-4">
+                A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
+              </p>
+              <div className="flex flex-wrap gap-2 font-mono text-sm text-text-secondary">
+                <span>VS Code</span>
+                <span>Sublime Text</span>
+                <span>Atom</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
