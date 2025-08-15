@@ -5,42 +5,37 @@ interface Blog {
   description: string;
   date: string;
   readTime: string;
-  tags: string[];
   link: string;
 }
 
 const blogs: Blog[] = [
   {
-    title: "Understanding React Server Components: A Deep Dive",
-    description: "Explore the revolutionary concept of React Server Components and how they're changing the way we build React applications. Learn about the benefits, use cases, and implementation details.",
-    date: "March 15, 2024",
-    readTime: "8 min read",
-    tags: ["React", "JavaScript", "Web Development"],
-    link: "https://dev.to/yourusername/understanding-react-server-components"
-  },
-  {
-    title: "Building Scalable APIs with FastAPI",
-    description: "A comprehensive guide to building high-performance APIs using FastAPI. Learn best practices, authentication, documentation, and deployment strategies.",
-    date: "February 28, 2024",
-    readTime: "12 min read",
-    tags: ["Python", "FastAPI", "Backend"],
-    link: "https://dev.to/yourusername/building-scalable-apis-with-fastapi"
-  },
-  {
-    title: "Mastering TypeScript: Advanced Types and Patterns",
-    description: "Deep dive into TypeScript's advanced type system. Learn about conditional types, mapped types, utility types, and design patterns for better type safety.",
-    date: "January 20, 2024",
+    title: "Go Concurrency: Goroutines, Channels and WaitGroups",
+    description: "In Go, we can make our program do more than one thing at the same time. This is called concurrency, and it’s a great ...",
+    date: "August 13, 2025",
     readTime: "10 min read",
-    tags: ["TypeScript", "JavaScript", "Programming"],
-    link: "https://dev.to/yourusername/mastering-typescript"
+    link: "https://dev.to/yash007_95/go-concurrency-goroutines-channels-and-waitgroups-165d"
   },
   {
-    title: "Clean Code Practices in JavaScript",
-    description: "Essential principles and practices for writing clean, maintainable JavaScript code. Covers naming conventions, function composition, error handling, and code organization.",
-    date: "December 15, 2023",
-    readTime: "15 min read",
-    tags: ["JavaScript", "Clean Code", "Best Practices"],
-    link: "https://dev.to/yourusername/clean-code-javascript"
+    title: "A Subtle Memory Leak in Go You Might Miss",
+    description: "When we think of memory leaks, we usually imagine something obvious like forgetting to close a file or a goroutine running forever. but in Go ...",
+    date: "July 24, 2025",
+    readTime: "7 min read",
+    link: "https://dev.to/yash007_95/a-subtle-memory-leak-in-go-you-might-miss-48ef"
+  },
+  {
+    title: "REST vs gRPC – When to Use What",
+    description: "Most of us start building APIs with REST. It’s easy, works well in browsers and is simple to test using tools like postman ....",
+    date: "July 26, 2025",
+    readTime: "10 min read",
+    link: "https://dev.to/yash007_95/rest-vs-grpc-when-to-use-what-18f"
+  },
+  {
+    title: "Reflection in Go — When You Need to Work with the Unknown",
+    description: "Go is a statically typed language, which means you usually know the type of every variable at compile time. but sometimes ...",
+    date: "July 26, 2025",
+    readTime: "6 min read",
+    link: "https://dev.to/yash007_95/reflection-in-go-when-you-need-to-work-with-the-unknown-4h6l"
   }
 ];
 
@@ -77,18 +72,6 @@ export default function Blogs() {
               <p className="text-text-secondary mb-4">
                 {blog.description}
               </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {blog.tags.map(tag => (
-                  <span
-                    key={tag}
-                    className="text-accent/80 bg-accent/5 px-3 py-1 rounded-full text-sm font-mono"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
 
               {/* Meta Info */}
               <div className="flex items-center gap-4 text-text-secondary text-sm">
