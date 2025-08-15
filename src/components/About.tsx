@@ -5,15 +5,16 @@ export default function About() {
   const [showMore, setShowMore] = useState(false);
 
   const initialPoints = [
-    "Full Stack Developer passionate about building scalable web applications and solving complex problems",
-    "Competitive Programmer with strong problem-solving skills (Specialist @Codeforces, ICPC Regionalist)",
-    "Experienced in modern web technologies including React, Node.js, TypeScript, and cloud platforms",
-    "Active contributor to open-source projects and technical writer sharing knowledge with the developer community",
-    "Hackathon enthusiast with multiple wins, experienced in rapid prototyping and innovative solution development"
+    "Here I've mentioned some of things about me, my mindset and my personal life. They are not in any particular order.",
+    "I'm a curious person who loves to learn new things and explore how the things are working. Now with AI tools like chatGPT, its even much easier and faster to do that.",
+    "I don't limit myself to any particular technology or programming language, as i think they are just the way to solve problems and satisfy the user and business needs.",
+    "I love reading books. one book which I recommed is 'The Mamba Mentality' by Kobe Bryant.",
+    "I love playing cricket. I've been playing since I was 7 years old.",
+    "I overthink sometimes but I'm doing meditation to improve it. and It's been 9 months since I'm doing it and it's going really well.",
+    "I believe in learning and building in public and I actively share my learnings on my linkedin and X (twitter)."
   ];
 
   const additionalPoints = [
-    "Currently focused on exploring System Design, Cloud Architecture, and building accessible web applications",
     "Based in India, open to remote opportunities and excited about working with innovative teams",
     "Strong background in Data Structures and Algorithms with consistent problem-solving practice",
     "Experience with agile methodologies and collaborative development environments",
