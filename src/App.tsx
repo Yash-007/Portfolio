@@ -7,6 +7,7 @@ import Blogs from './components/Blogs';
 import About from './components/About';
 import StarBackground from './components/StarBackground';
 import SocialLinks from './components/SocialLinks';
+import Quote from './components/Quote';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -151,7 +152,7 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="min-h-screen py-20">
+        <section id="about" className="min-h-screen pb-0 pt-20">
           <div className="container mx-auto px-6">
             <div className="flex items-center gap-4 mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
@@ -162,6 +163,9 @@ function App() {
             <About />
           </div>
         </section>
+
+        {/* Quote Section */}
+        <Quote />
       </main>
     </div>
   );
