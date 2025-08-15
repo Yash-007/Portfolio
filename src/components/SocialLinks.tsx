@@ -3,7 +3,7 @@ export default function SocialLinks() {
     <div className="fixed left-10 bottom-0 hidden xl:flex flex-col items-center gap-6">
       {/* LinkedIn */}
       <a
-        href="https://linkedin.com/in/yourusername"
+        href="https://www.linkedin.com/in/yash-agrawal-514974229"
         target="_blank"
         rel="noopener noreferrer"
         className="text-text-secondary hover:text-accent hover:-translate-y-1 transition-all duration-200"
@@ -18,7 +18,7 @@ export default function SocialLinks() {
 
       {/* Twitter */}
       <a
-        href="https://twitter.com/yourusername"
+        href="https://x.com/yashx_404"
         target="_blank"
         rel="noopener noreferrer"
         className="text-text-secondary hover:text-accent hover:-translate-y-1 transition-all duration-200"
@@ -31,7 +31,7 @@ export default function SocialLinks() {
 
       {/* GitHub */}
       <a
-        href="https://github.com/yourusername"
+        href="https://github.com/Yash-007"
         target="_blank"
         rel="noopener noreferrer"
         className="text-text-secondary hover:text-accent hover:-translate-y-1 transition-all duration-200"
@@ -44,7 +44,7 @@ export default function SocialLinks() {
 
       {/* CodeForces */}
       <a
-        href="https://codeforces.com/profile/yourusername"
+        href="https://codeforces.com/profile/Yash_92"
         target="_blank"
         rel="noopener noreferrer"
         className="text-text-secondary hover:text-accent hover:-translate-y-1 transition-all duration-200"
@@ -57,7 +57,7 @@ export default function SocialLinks() {
 
       {/* CodeChef */}
       <a
-        href="https://www.codechef.com/users/yourusername"
+        href="https://www.codechef.com/users/yash_92"
         target="_blank"
         rel="noopener noreferrer"
         className="text-text-secondary hover:text-accent hover:-translate-y-1 transition-all duration-200"
