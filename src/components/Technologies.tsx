@@ -10,17 +10,17 @@ const technologies: TechCategory[] = [
   {
     title: "Languages",
     icon: <CodeBracketIcon className="w-6 h-6" />,
-    skills: ["JavaScript", "TypeScript", "Python", "Java", "C++", "HTML/CSS"]
+    skills: ["Go", "JavaScript", "TypeScript", "Python", "C++", "C", "HTML/CSS"]
   },
   {
     title: "Frontend",
     icon: <WindowIcon className="w-6 h-6" />,
-    skills: ["React", "Next.js", "Redux", "Tailwind CSS", "Material UI", "SCSS"]
+    skills: ["React", "Next.js", "Redux", "Tailwind CSS", "Material UI", "Ant Design"]
   },
   {
     title: "Backend",
     icon: <ServerIcon className="w-6 h-6" />,
-    skills: ["Node.js", "Express", "FastAPI", "Django", "REST APIs", "GraphQL"]
+    skills: ["Node.js", "Express", "Gin", "FastAPI", "Django", "REST APIs", "GraphQL"]
   },
   {
     title: "Databases",
@@ -30,12 +30,12 @@ const technologies: TechCategory[] = [
   {
     title: "DevOps & Cloud",
     icon: <CommandLineIcon className="w-6 h-6" />,
-    skills: ["AWS", "Docker", "Git", "CI/CD", "Linux", "Nginx"]
+    skills: ["AWS", "Docker", "Git", "CI/CD", "Nginx"]
   },
   {
     title: "Tools",
     icon: <WrenchScrewdriverIcon className="w-6 h-6" />,
-    skills: ["VS Code", "Postman", "Figma", "Jira", "Webpack", "Jest"]
+    skills: ["VS Code", "Postman", "Figma", "Jira", "Github Copilot", "Cursor AI"]
   }
 ];
 
