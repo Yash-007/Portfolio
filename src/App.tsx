@@ -6,6 +6,7 @@ import Achievements from './components/Achievements';
 import Blogs from './components/Blogs';
 import About from './components/About';
 import StarBackground from './components/StarBackground';
+import SocialLinks from './components/SocialLinks';
 
 const sections = [
   { id: 'home', label: 'Home' },
@@ -23,6 +24,7 @@ function App() {
       <div className="absolute inset-0 z-0">
         <StarBackground />
       </div>
+      <SocialLinks />
 
       {/* Header */}
       <header className="sticky top-0 w-full bg-primary/80 backdrop-blur-sm border-b border-secondary/50 z-50">
