@@ -11,15 +11,15 @@ interface Achievement {
 const achievements: Achievement[] = [
   {
     title: "ICPC Regionalist",
-    subtitle: "Asia-West Continental Finals",
+    subtitle: "ACM ICPC Amritapuri Regionals",
     description: "Secured position in top 50 teams. Solved complex algorithmic problems under time pressure, demonstrating strong problem-solving and teamwork skills.",
     icon: <TrophyIcon className="w-8 h-8" />,
     link: "https://icpc.global/"
   },
   {
-    title: "Specialist @Codeforces",
-    subtitle: "Rating: 1422",
-    description: "Achieved Specialist rank by consistently solving complex algorithmic problems. Participated in 50+ contests, demonstrating strong competitive programming skills.",
+    title: "Specialist @Codeforces, 1750 @Codechef",
+    subtitle: "",
+    description: "Achieved Specialist rank on codeforces and over 1750 rating on Codechef by consistently solving complex algorithmic problems. Participated in 100+ contests and solved 1000+ problems on various platforms.",
     icon: <StarIcon className="w-8 h-8" />,
     link: "https://codeforces.com/"
   },
