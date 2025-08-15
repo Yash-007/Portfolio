@@ -68,16 +68,16 @@ function App() {
         <section id="home" className="min-h-screen flex items-center pt-20">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl">
-              <p className="text-accent font-mono mb-5">Hi, my name is</p>
+              <p className="text-accent font-mono mb-5">Hi, I'm</p>
               <h1 className="text-5xl md:text-7xl font-bold mb-4 text-text">
                 Yash Agrawal.
               </h1>
-              <h2 className="text-4xl md:text-6xl font-bold mb-8 text-text-secondary">
-                I build things for the web.
+              <h2 className="text-4xl md:text-4xl font-bold mb-8 text-text-secondary">
+                 A Software Developer from India.
               </h2>
               <p className="text-text-secondary text-lg max-w-2xl mb-12">
-                I'm a software engineer specializing in building exceptional digital experiences. 
-                Currently, I'm focused on building accessible, human-centered products.
+                I'm a Full Stack Developer passionate about building optimized and scalable software applications,
+                while having a focus on clean, maintainable code that follows good practices.
               </p>
               <a 
                 href="#projects"

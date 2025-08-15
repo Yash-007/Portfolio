@@ -1,6 +1,6 @@
 export default function SocialLinks() {
   return (
-    <div className="fixed left-10 bottom-0 hidden xl:flex flex-col items-center gap-6">
+    <div className="fixed left-10 bottom-0 hidden xl:flex flex-col items-center gap-6 z-50">
       {/* LinkedIn */}
       <a
         href="https://www.linkedin.com/in/yash-agrawal-514974229"
