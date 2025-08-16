@@ -96,7 +96,7 @@ export default function Blogs() {
       {/* View All Blogs Link */}
       <div className="text-center pt-6 sm:pt-8">
         <a
-          href="https://dev.to/yourusername"
+          href="https://dev.to/yash007_95"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 sm:gap-2 text-accent hover:text-accent/80 transition-colors font-mono text-sm sm:text-base"

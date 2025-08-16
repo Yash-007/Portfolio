@@ -216,7 +216,7 @@ function App() {
           <div className="container mx-auto px-4 sm:px-6">
             <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
-                <span className="text-accent font-mono text-xl md:text-2xl">05.</span> Featured Blog Posts
+                <span className="text-accent font-mono text-xl md:text-2xl">05.</span> Blog Posts
               </h2>
               <div className="h-[1px] flex-grow bg-secondary"></div>
             </div>
