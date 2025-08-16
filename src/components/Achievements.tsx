@@ -1,4 +1,4 @@
-import { TrophyIcon, AcademicCapIcon, StarIcon, CodeBracketIcon } from '@heroicons/react/24/outline';
+import { TrophyIcon, AcademicCapIcon, StarIcon, CodeBracketIcon, UserGroupIcon } from '@heroicons/react/24/outline';
 
 interface Achievement {
   title: string;
@@ -24,18 +24,23 @@ const achievements: Achievement[] = [
     link: "https://codeforces.com/"
   },
   {
-    title: "Smart India Hackathon Winner",
-    subtitle: "National Level Competition",
-    description: "Led team to victory by developing an innovative solution for real-time disaster management using AI and IoT technologies.",
-    icon: <CodeBracketIcon className="w-8 h-8" />,
-    link: "https://sih.gov.in/"
+    title: "Internal Hackathon Winner @Coinswitch",
+    subtitle: "",
+    description: "Won Coinswitch's internal hackathon for new joiners by developing a real-time crypto trading bot, our team secured the first place and 10,000 Xoxoday points in prize money.",
+    icon: <CodeBracketIcon className="w-8 h-8" />
   },
   {
-    title: "Microsoft Imagine Cup Finalist",
-    subtitle: "National Finals",
-    description: "Developed a machine learning-based solution for early disease detection in crops, reaching the national finals among thousands of participants.",
+    title: "Code Gladiators Finalist",
+    subtitle: "TechGig's National Coding Competition",
+    description: "Qualified for the finals of India's biggest coding competition, competing against 2.5+ lakh participants through multiple challenging rounds of algorithmic problem-solving.",
     icon: <AcademicCapIcon className="w-8 h-8" />,
-    link: "https://imaginecup.microsoft.com/"
+    link: "https://www.techgig.com/codegladiators"
+  },
+  {
+    title: "Community Impact",
+    subtitle: "DSA & Career Mentoring",
+    description: "Guided over 100+ students from college and LinkedIn community in practicing DSA and preparing for internships and job opportunities.",
+    icon: <UserGroupIcon className="w-8 h-8" />
   }
 ];
 
