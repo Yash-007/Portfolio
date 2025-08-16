@@ -51,7 +51,7 @@ function App() {
                 </Link>
               ))}
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1XLLLkhktTGmwiWFaX_fPb7XamfqdW1Os/view?usp=drivesdk"
                 className="px-4 py-2 border border-accent text-accent text-sm hover:bg-accent/10 transition-colors rounded font-mono"
                 target="_blank"
                 rel="noopener noreferrer"
