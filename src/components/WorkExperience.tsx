@@ -9,9 +9,9 @@ interface WorkExperience {
 
 const experiences: WorkExperience[] = [
   {
-    company: 'TechCorp',
-    role: 'Senior Software Engineer',
-    period: 'January 2023 - Present',
+    company: 'Coinswitch',
+    role: 'Software Development Engineer',
+    period: 'January 2025 - Present',
     responsibilities: [
       'Lead development of microservices architecture using Node.js and TypeScript',
       'Implemented CI/CD pipelines reducing deployment time by 40%',
@@ -20,9 +20,9 @@ const experiences: WorkExperience[] = [
     ]
   },
   {
-    company: 'DataSoft',
-    role: 'Full Stack Developer',
-    period: 'March 2021 - December 2022',
+    company: 'TruEstate',
+    role: 'Software Development Engineer Intern',
+    period: 'August 2024 - January 2025',
     responsibilities: [
       'Developed and maintained multiple React-based web applications',
       'Optimized database queries resulting in 50% faster load times',
@@ -31,9 +31,9 @@ const experiences: WorkExperience[] = [
     ]
   },
   {
-    company: 'Starry',
-    role: 'Software Engineer Co-op',
-    period: 'July - December 2016',
+    company: 'Flynaut',
+    role: 'Full Stack Developer Intern',
+    period: 'April 2024 - July 2024',
     responsibilities: [
       'Engineered and improved major features of Starry\'s customer-facing Android web app using ES6, Handlebars, Backbone, Marionette, and CSS',
       'Proposed and implemented scalable solutions to issues identified with cloud services and applications',
@@ -41,25 +41,14 @@ const experiences: WorkExperience[] = [
     ]
   },
   {
-    company: 'InnovateTech',
-    role: 'Junior Developer',
-    period: 'June 2015 - May 2016',
+    company: 'Nanostack',
+    role: 'Full Stack Developer Intern',
+    period: 'August 2023 - December 2023',
     responsibilities: [
       'Built and maintained RESTful APIs using Python and Django',
       'Implemented automated testing suites improving code coverage by 75%',
       'Assisted in the migration of legacy systems to modern frameworks',
       'Participated in daily stand-ups and sprint planning meetings'
-    ]
-  },
-  {
-    company: 'WebSolutions',
-    role: 'Web Development Intern',
-    period: 'January - May 2015',
-    responsibilities: [
-      'Developed responsive websites using HTML5, CSS3, and JavaScript',
-      'Created and maintained WordPress themes and plugins',
-      'Optimized website performance and SEO metrics',
-      'Assisted senior developers with bug fixes and feature implementations'
     ]
   }
 ];
