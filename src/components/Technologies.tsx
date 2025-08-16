@@ -41,6 +41,7 @@ const technologies: TechCategory[] = [
 
 export default function Technologies() {
   return (
+    <>
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {technologies.map((category) => (
         <div 
@@ -72,5 +73,10 @@ export default function Technologies() {
         </div>
       ))}
     </div>
+    <p className="text-text-secondary text-center mt-12 max-w-3xl mx-auto italic">
+      I don't limit myself to specific technologies or programming languages. To me, they are tools to solve problems
+      and create value by engineering solutions that meet user needs and business objectives.
+    </p>
+    </>
   );
 }
