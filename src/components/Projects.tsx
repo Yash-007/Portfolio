@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { CodeBracketIcon, LinkIcon } from '@heroicons/react/24/outline';
 
 interface Project {
@@ -31,9 +32,9 @@ const projects: Project[] = [
   }
 ];
 
-export default function Projects() {
+const Projects = memo(function ProjectsComponent() {
   return (
-    <div className="space-y-24">
+    <div className="space-y-16 sm:space-y-24">
       {/* Featured Projects */}
       {projects
         .filter(project => project.featured)
@@ -41,12 +42,12 @@ export default function Projects() {
           <div
             key={project.title}
             className={`flex flex-col ${
-              index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-            } gap-8 group`}
+              index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+            } gap-4 sm:gap-6 lg:gap-8 group`}
           >
             {/* Project Image */}
-            <div className="md:w-3/5 relative">
-              <div className="relative h-[300px] md:h-[400px] overflow-hidden rounded-lg bg-secondary">
+            <div className="lg:w-3/5 relative">
+              <div className="relative h-[200px] sm:h-[300px] lg:h-[400px] overflow-hidden rounded-lg bg-secondary">
                 <img
                   src={project.image}
                   alt={project.title}
@@ -57,21 +58,21 @@ export default function Projects() {
             </div>
 
             {/* Project Info */}
-            <div className="md:w-2/5 flex flex-col justify-center">
-              <p className="text-accent font-mono text-sm mb-2">Featured Project</p>
-              <h3 className="text-2xl font-bold text-text mb-4 group-hover:text-accent transition-colors">
+            <div className="lg:w-2/5 flex flex-col justify-center">
+              <p className="text-accent font-mono text-xs sm:text-sm mb-1 sm:mb-2">Featured Project</p>
+              <h3 className="text-lg sm:text-2xl font-bold text-text mb-3 sm:mb-4 group-hover:text-accent transition-colors">
                 {project.title}
               </h3>
-              <div className="bg-secondary p-6 rounded-lg shadow-xl mb-4">
-                <p className="text-text-secondary">
+              <div className="bg-secondary p-4 sm:p-6 rounded-lg shadow-xl mb-3 sm:mb-4">
+                <p className="text-text-secondary text-sm sm:text-base">
                   {project.description}
                 </p>
               </div>
-              <div className="flex flex-wrap gap-3 mb-6 font-mono text-sm">
+              <div className="flex flex-wrap gap-2 sm:gap-3 mb-4 sm:mb-6 font-mono text-xs sm:text-sm">
                 {project.technologies.map(tech => (
                   <span
                     key={tech}
-                    className="text-text-secondary"
+                    className="text-text-secondary bg-secondary/50 px-2 py-1 rounded"
                   >
                     {tech}
                   </span>
@@ -86,7 +87,7 @@ export default function Projects() {
                     className="text-text-secondary hover:text-accent transition-colors"
                     aria-label="GitHub Repository"
                   >
-                    <CodeBracketIcon className="w-6 h-6" />
+                    <CodeBracketIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </a>
                 )}
                 {project.liveLink && (
@@ -97,7 +98,7 @@ export default function Projects() {
                     className="text-text-secondary hover:text-accent transition-colors"
                     aria-label="Live Demo"
                   >
-                    <LinkIcon className="w-6 h-6" />
+                    <LinkIcon className="w-5 h-5 sm:w-6 sm:h-6" />
                   </a>
                 )}
               </div>
@@ -107,17 +108,17 @@ export default function Projects() {
 
       {/* Other Projects Grid */}
       <div>
-        <h3 className="text-xl font-bold text-center text-text mb-4">Other Noteworthy Projects</h3>
-        <p className="text-text-secondary text-center mb-12 font-mono">view the archive</p>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <h3 className="text-lg sm:text-xl font-bold text-center text-text mb-2 sm:mb-4">Other Noteworthy Projects</h3>
+        <p className="text-text-secondary text-center mb-8 sm:mb-12 font-mono text-sm">view the archive</p>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {[1, 2, 3, 4, 5, 6].map((_, index) => (
             <div
               key={index}
-              className="bg-secondary p-6 rounded-lg group hover:translate-y-[-5px] transition-all duration-300"
+              className="bg-secondary p-4 sm:p-6 rounded-lg group hover:translate-y-[-5px] transition-all duration-300"
             >
               <div className="flex justify-between items-start mb-6">
                 <div className="text-accent">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12" viewBox="0 0 24 24" fill="currentColor">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 sm:h-12 sm:w-12" viewBox="0 0 24 24" fill="currentColor">
                     <path fillRule="evenodd" d="M3 3h18v18H3V3zm16 16V5H5v14h14z" clipRule="evenodd" />
                   </svg>
                 </div>
@@ -130,13 +131,13 @@ export default function Projects() {
                   </a>
                 </div>
               </div>
-              <h4 className="text-text text-xl font-bold mb-2 group-hover:text-accent transition-colors">
+              <h4 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 group-hover:text-accent transition-colors">
                 Project Title {index + 1}
               </h4>
-              <p className="text-text-secondary text-sm mb-4">
+              <p className="text-text-secondary text-xs sm:text-sm mb-3 sm:mb-4">
                 A minimal, dark blue theme for VS Code, Sublime Text, Atom, iTerm, and more.
               </p>
-              <div className="flex flex-wrap gap-2 font-mono text-sm text-text-secondary">
+              <div className="flex flex-wrap gap-2 font-mono text-xs sm:text-sm text-text-secondary">
                 <span>VS Code</span>
                 <span>Sublime Text</span>
                 <span>Atom</span>
@@ -147,4 +148,6 @@ export default function Projects() {
       </div>
     </div>
   );
-}
+});
+
+export default Projects;

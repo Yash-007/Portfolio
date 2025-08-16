@@ -17,7 +17,7 @@ export default function StarBackground() {
         fullScreen: false,
         style: {
           position: "absolute",
-          zIndex: 1,
+          zIndex: "1",
         },
         background: {
           color: "transparent",
@@ -45,15 +45,15 @@ export default function StarBackground() {
               default: "out",
             },
             random: true,
-            speed: 0.2,
+            speed: 0.1, // Slower movement for better performance
             straight: false,
           },
           number: {
             density: {
               enable: true,
-              area: 1000,
+              area: 3000, // Much larger area to reduce particle density
             },
-            value: 40,
+            value: typeof window !== 'undefined' && window.innerWidth < 768 ? 15 : 25, // Even fewer particles
           },
           opacity: {
             value: 0.15,

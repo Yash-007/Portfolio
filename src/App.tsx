@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Link } from 'react-scroll';
 import WorkExperience from './components/WorkExperience';
 import Projects from './components/Projects';
@@ -20,11 +21,13 @@ const sections = [
 ];
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
+
   return (
     <div className="relative min-h-screen bg-primary text-text">
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <StarBackground />
-      </div>
+      </div> */}
       <SocialLinks />
 
       {/* Header */}
@@ -35,7 +38,77 @@ function App() {
               <span className="text-accent">Yash</span>
               <span className="text-text">.dev</span>
             </h1>
-            <div className="hidden md:flex items-center space-x-8">
+            {/* Mobile menu button */}
+            <button 
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="md:hidden p-2 text-text-secondary hover:text-accent"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+              </svg>
+            </button>
+
+            {/* Mobile Menu */}
+            {isMobileMenuOpen && (
+              <div className="fixed inset-0 z-[100] md:hidden">
+                {/* Backdrop */}
+                <div 
+                  className="absolute inset-0 bg-primary/90 backdrop-blur-sm"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                />
+                
+                {/* Menu Content */}
+                <div className="absolute right-0 top-0 h-screen w-3/4 max-w-sm bg-secondary shadow-xl">
+                  {/* Header */}
+                  <div className="p-4 border-b border-secondary/50 flex items-center justify-between">
+                    <h2 className="text-xl font-bold">
+                      <span className="text-accent">Menu</span>
+                    </h2>
+                    <button 
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      className="p-2 text-text-secondary hover:text-accent"
+                    >
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Navigation Links */}
+                  <div className="p-4">
+                    <div className="flex flex-col space-y-3">
+                      {sections.map((section, index) => (
+                        <Link
+                          key={section.id}
+                          to={section.id}
+                          spy={true}
+                          smooth={true}
+                          offset={-80}
+                          duration={500}
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className="flex items-center px-4 py-3 text-text-secondary hover:text-accent hover:bg-secondary/50 rounded-lg transition-colors"
+                        >
+                          <span className="text-accent font-mono mr-3 text-sm">0{index + 1}.</span>
+                          <span className="text-base">{section.label}</span>
+                        </Link>
+                      ))}
+                      <a
+                        href="https://drive.google.com/file/d/1XLLLkhktTGmwiWFaX_fPb7XamfqdW1Os/view?usp=drivesdk"
+                        className="mt-4 px-4 py-3 border border-accent text-accent text-sm hover:bg-accent/10 transition-colors rounded-lg font-mono text-center"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                      >
+                        Resume
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex items-center space-x-4 lg:space-x-8">
               {sections.map((section, index) => (
                 <Link
                   key={section.id}
@@ -66,17 +139,17 @@ function App() {
       {/* Main Content */}
       <main className="relative z-10">
         {/* Home/Landing Section */}
-        <section id="home" className="min-h-screen flex items-center pt-20">
-          <div className="container mx-auto px-6">
-            <div className="max-w-4xl">
-              <p className="text-accent font-mono mb-5">Hi, I'm</p>
-              <h1 className="text-5xl md:text-7xl font-bold mb-4 text-text">
+        <section id="home" className="min-h-[85vh] md:min-h-screen flex items-center justify-center pt-0 md:pt-20">
+          <div className="container mx-auto px-6 -mt-16 md:mt-0">
+            <div className="max-w-4xl mx-auto">
+              <p className="text-accent font-mono mb-3 sm:mb-5 text-sm sm:text-base">Hi, I'm</p>
+              <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-2 sm:mb-4 text-text">
                 Yash Agrawal.
               </h1>
-              <h2 className="text-4xl md:text-4xl font-bold mb-8 text-text-secondary">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-8 text-text-secondary">
                  A Software Developer from India.
               </h2>
-              <p className="text-text-secondary text-lg max-w-2xl mb-12">
+              <p className="text-text-secondary text-base sm:text-lg max-w-2xl mb-8 sm:mb-12">
                 I'm a Full Stack Developer passionate about building optimized and scalable software applications,
                 while having a focus on clean, maintainable code that follows good practices.
               </p>
@@ -92,9 +165,9 @@ function App() {
         </section>
 
         {/* Other Sections */}
-        <section id="work" className="min-h-screen py-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="work" className="min-h-screen py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">01.</span> Work Experience
               </h2>
@@ -104,9 +177,9 @@ function App() {
           </div>
         </section>
 
-        <section id="projects" className="min-h-screen py-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="projects" className="min-h-screen py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">02.</span> Featured Projects
               </h2>
@@ -116,9 +189,9 @@ function App() {
           </div>
         </section>
 
-        <section id="technologies" className="min-h-screen py-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="technologies" className="min-h-screen py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">03.</span> Tools & Technologies
               </h2>
@@ -128,9 +201,9 @@ function App() {
           </div>
         </section>
 
-        <section id="achievements" className="min-h-screen py-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="achievements" className="min-h-screen py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">04.</span> Achievements
               </h2>
@@ -140,9 +213,9 @@ function App() {
           </div>
         </section>
 
-        <section id="blogs" className="min-h-screen py-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="blogs" className="min-h-screen py-12 sm:py-16 md:py-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">05.</span> Featured Blog Posts
               </h2>
@@ -152,9 +225,9 @@ function App() {
           </div>
         </section>
 
-        <section id="about" className="min-h-screen pb-0 pt-20">
-          <div className="container mx-auto px-6">
-            <div className="flex items-center gap-4 mb-12">
+        <section id="about" className="min-h-screen pb-0 pt-12 sm:pt-16 md:pt-20">
+          <div className="container mx-auto px-4 sm:px-6">
+            <div className="flex items-center gap-2 sm:gap-4 mb-8 sm:mb-12">
               <h2 className="text-2xl md:text-3xl font-bold text-text">
                 <span className="text-accent font-mono text-xl md:text-2xl">06.</span> About Me
               </h2>

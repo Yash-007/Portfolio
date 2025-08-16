@@ -41,7 +41,7 @@ const blogs: Blog[] = [
 
 export default function Blogs() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-4 sm:space-y-8">
       {blogs.map((blog, index) => (
         <a
           key={blog.title}
@@ -50,37 +50,37 @@ export default function Blogs() {
           rel="noopener noreferrer"
           className="group block"
         >
-          <article className="relative bg-secondary p-8 rounded-lg border border-secondary/50 
+          <article className="relative bg-secondary p-4 sm:p-6 lg:p-8 rounded-lg border border-secondary/50 
                             hover:border-accent/30 transition-all duration-300">
             {/* Blog Number */}
-            <div className="absolute -left-4 top-8 font-mono text-sm px-4 py-1 bg-accent/10 text-accent rounded-r-full">
+            <div className="absolute -left-3 sm:-left-4 top-4 sm:top-6 lg:top-8 font-mono text-xs sm:text-sm px-3 sm:px-4 py-1 bg-accent/10 text-accent rounded-r-full">
               {String(index + 1).padStart(2, '0')}
             </div>
 
-            <div className="ml-8">
+            <div className="ml-6 sm:ml-8">
               {/* Title and External Link Icon */}
-              <div className="flex items-start justify-between gap-4 mb-3">
-                <h3 className="text-xl font-bold text-text group-hover:text-accent transition-colors">
+              <div className="flex items-start justify-between gap-2 sm:gap-4 mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-text group-hover:text-accent transition-colors">
                   {blog.title}
                 </h3>
-                <ArrowUpRightIcon className="w-5 h-5 text-accent opacity-0 group-hover:opacity-100 
+                <ArrowUpRightIcon className="w-4 h-4 sm:w-5 sm:h-5 text-accent opacity-0 group-hover:opacity-100 
                                           transform group-hover:translate-x-1 group-hover:-translate-y-1 
                                           transition-all duration-300" />
               </div>
 
               {/* Description */}
-              <p className="text-text-secondary mb-4">
+              <p className="text-text-secondary mb-3 sm:mb-4 text-sm sm:text-base">
                 {blog.description}
               </p>
 
               {/* Meta Info */}
-              <div className="flex items-center gap-4 text-text-secondary text-sm">
+              <div className="flex items-center gap-3 sm:gap-4 text-text-secondary text-xs sm:text-sm">
                 <span className="flex items-center gap-1">
-                  <CalendarIcon className="w-4 h-4" />
+                  <CalendarIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   {blog.date}
                 </span>
                 <span className="flex items-center gap-1">
-                  <ClockIcon className="w-4 h-4" />
+                  <ClockIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   {blog.readTime}
                 </span>
               </div>
@@ -94,15 +94,15 @@ export default function Blogs() {
       ))}
 
       {/* View All Blogs Link */}
-      <div className="text-center pt-8">
+      <div className="text-center pt-6 sm:pt-8">
         <a
           href="https://dev.to/yourusername"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-mono"
+          className="inline-flex items-center gap-1.5 sm:gap-2 text-accent hover:text-accent/80 transition-colors font-mono text-sm sm:text-base"
         >
           View All Blog Posts
-          <ArrowUpRightIcon className="w-4 h-4" />
+          <ArrowUpRightIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
         </a>
       </div>
     </div>

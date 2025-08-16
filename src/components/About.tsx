@@ -24,14 +24,14 @@ export default function About() {
   return (
     <div className="max-w-3xl">
       {/* Initial Points - Always visible */}
-      <ul className="space-y-6">
+      <ul className="space-y-4 sm:space-y-6">
         {initialPoints.map((point, index) => (
           <li 
             key={`initial-${index}`} 
-            className="flex items-start gap-3 group"
+            className="flex items-start gap-2 sm:gap-3 group"
           >
-            <span className="text-accent text-xl font-light mt-0.5">▹</span>
-            <span className="text-base text-text group-hover:text-accent transition-colors">
+            <span className="text-accent text-lg sm:text-xl font-light mt-0.5">▹</span>
+            <span className="text-sm sm:text-base text-text group-hover:text-accent transition-colors">
               {point}
             </span>
           </li>
@@ -42,14 +42,14 @@ export default function About() {
       <div className={`transition-all duration-500 ease-in-out overflow-hidden ${
         showMore ? 'max-h-[500px] opacity-100 mt-6' : 'max-h-0 opacity-0'
       }`}>
-        <ul className="space-y-6">
+        <ul className="space-y-4 sm:space-y-6">
           {additionalPoints.map((point, index) => (
             <li 
               key={`additional-${index}`} 
-              className="flex items-start gap-3 group"
+              className="flex items-start gap-2 sm:gap-3 group"
             >
-              <span className="text-accent text-xl font-light mt-0.5">▹</span>
-              <span className="text-base text-text group-hover:text-accent transition-colors">
+              <span className="text-accent text-lg sm:text-xl font-light mt-0.5">▹</span>
+              <span className="text-sm sm:text-base text-text group-hover:text-accent transition-colors">
                 {point}
               </span>
             </li>
@@ -60,16 +60,16 @@ export default function About() {
       {/* View More Button */}
       <button
         onClick={() => setShowMore(!showMore)}
-        className="mt-8 flex items-center gap-2 px-4 py-2 border border-accent rounded 
+        className="mt-6 sm:mt-8 flex items-center gap-1.5 sm:gap-2 px-3 sm:px-4 py-1.5 sm:py-2 border border-accent rounded 
                  text-accent hover:bg-accent/10 transition-all duration-300 mx-auto group"
       >
-        <span className="text-sm font-mono">
+        <span className="text-xs sm:text-sm font-mono">
           {showMore ? 'Show Less' : 'View More'}
         </span>
         {showMore ? (
-          <ChevronUpIcon className="w-4 h-4 group-hover:-translate-y-0.5 transition-transform" />
+          <ChevronUpIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:-translate-y-0.5 transition-transform" />
         ) : (
-          <ChevronDownIcon className="w-4 h-4 group-hover:translate-y-0.5 transition-transform" />
+          <ChevronDownIcon className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-y-0.5 transition-transform" />
         )}
       </button>
     </div>
