@@ -6,7 +6,6 @@ import Technologies from './components/Technologies';
 import Achievements from './components/Achievements';
 import Blogs from './components/Blogs';
 import About from './components/About';
-import StarBackground from './components/StarBackground';
 import SocialLinks from './components/SocialLinks';
 import Quote from './components/Quote';
 
